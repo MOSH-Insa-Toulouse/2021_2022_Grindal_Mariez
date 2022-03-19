@@ -9,23 +9,25 @@ Granulometric sensor
 * **point 2** : ?
 * **poin 3** : ?
 
-### Project explaination and use
-
+## Project explaination and use of the sensor
 > blabla
 > blabla
 
-### Etapes d'élaboration du projet
+## Etapes d'élaboration du projet
 > Grisolia schema on moodle page
 
-### Folders/Directories in the git repository
-#### Présentation du capteur granulométrique
-##### Le capteur
-> Hello voici la description du capteur. 
-##### propriété d'un système granulaire
-#### Acquisition des données
-##### La carte Arduino
-##### Le conditionneur
-###### Schéma electrique
-###### Code du système
-###### Tests KiCad & LT-Spice
-###### Réalisation du PCB
+## Folders/Directories in the git repository
+###Electronic conception and test on LT-Spice
+> explain 
+### graphite sensor
+> explain
+### Arduino code
+> * **basic circuit, get the value from graphite sensor** : complete
+> * **OLED** : complete
+> * **Bth** : 
+> * **digital pot** : 
+### Application code
+> explain
+### PCB conception no KiCad
+
+###### plus petit
