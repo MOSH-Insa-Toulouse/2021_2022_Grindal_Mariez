@@ -5,9 +5,6 @@ Granulometric sensor
 ## Project background
 > Introduction about the project, background blablabla
 > blablabla
-* **point 1** : complete
-* **point 2** : ?
-* **poin 3** : ?
 
 ## Project explaination and use of the sensor
 > blabla
@@ -22,10 +19,14 @@ Granulometric sensor
 ### graphite sensor
 > explain
 ### Arduino code
-> * **basic circuit, get the value from graphite sensor** : complete
-> * **OLED** : complete
-> * **Bth** : 
-> * **digital pot** : 
+* **basic circuit, get the value from graphite sensor**
+> explain
+* **OLED**
+> explain
+* **Bth** 
+> explain
+* **digital pot**
+> explain
 ### Application code
 > explain
 ### PCB conception no KiCad
