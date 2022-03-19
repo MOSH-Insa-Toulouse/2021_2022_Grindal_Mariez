@@ -15,19 +15,19 @@ Granulometric sensor
 
 ## Folders/Directories in the git repository
 
-###Electronic conception and test on LT-Spice
+### Electronic conception and test on LT-Spice
 > explain 
 ### graphite sensor
 > explain
 ### Arduino code
 * **basic circuit, get the value from graphite sensor**
-###### explain
+    ###### explain
 * **OLED**
-###### explain
+    ###### explain
 * **Bth** 
-###### explain
+    ###### explain
 * **digital pot**
-###### explain
+    ###### explain
 
 ### Application code
 > explain
