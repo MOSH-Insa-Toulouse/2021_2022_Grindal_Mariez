@@ -3,16 +3,16 @@
 Granulometric sensor project
 
 ## Objective of the project
-"Design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application"
+> "Design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application"
 
 ## Main steps
-> Electrical conception and simulation on LTSpice
-> Graphite sensor conception
-> PCB conception and printing
-> Circuit conception
-> Arduino code
-> Test
-> Datasheet writing
+* Electrical conception and simulation on LTSpice
+* Graphite sensor conception
+* PCB conception and printing
+* Circuit conception
+* Arduino code
+* Test
+* Datasheet writing
 
 ## Folders/Directories in the git repository
 
