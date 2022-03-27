@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "Library_shield")(type "KiCad")(uri "${KIPRJMOD}/Library_shield.kicad_sym")(options "")(descr ""))
+  (lib (name "ky-040")(type "KiCad")(uri "${KIPRJMOD}/ky-040.kicad_sym")(options "")(descr ""))
+  (lib (name "bt_hc-05")(type "KiCad")(uri "${KIPRJMOD}/bt_hc-05.kicad_sym")(options "")(descr ""))
+)
