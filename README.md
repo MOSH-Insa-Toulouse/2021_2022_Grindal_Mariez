@@ -1,17 +1,18 @@
 # 2021_2022_Grindal_Mariez
 
-Granulometric sensor
+Granulometric sensor project
 
-## Project background
-> Introduction about the project, background blablabla
-> blablabla
+## Objective of the project
+"Design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application"
 
-## Project explaination and use of the sensor
-> blabla
-> blabla
-
-## Etapes d'élaboration du projet
-> Grisolia schema on moodle page
+## Main steps
+> Electrical conception and simulation on LTSpice
+> Graphite sensor conception
+> PCB conception and printing
+> Circuit conception
+> Arduino code
+> Test
+> Datasheet writing
 
 ## Folders/Directories in the git repository
 
