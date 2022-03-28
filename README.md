@@ -14,12 +14,12 @@ Granulometric sensor project
 * Test
 * Datasheet writing
 
-## Folders/Directories in the git repository
-
 ### Electronic conception and test on LT-Spice
 > explain 
+> 
 ### graphite sensor
 > explain
+> 
 ### Arduino code
 * **basic circuit, get the value from graphite sensor**
     > explain
@@ -32,6 +32,7 @@ Granulometric sensor project
 
 ### Application code
 > explain
+> 
 ### PCB conception on KiCad
 > Circuit conception was made on KICAD. After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
