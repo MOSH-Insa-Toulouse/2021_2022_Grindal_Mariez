@@ -34,12 +34,12 @@ Granulometric sensor project
 > explain
 ### PCB conception on KiCad
 > Circuit conception was made on KICAD. After doing the schematic, we draw the PCB with the previous dimensions :
-> *Track length = 0.9 mm
-> *Isolation width = 0.7 mm
-> *Pad dimensions for OLED, Bluetooth module and rotary encoder = 2 mm * 2.5 mm
-> *Drill size for OLED, bluetooth module, rotary encoder, AOP and digital potentiometer = 1 mm
-> *Pad size for AOP and digital potentiometer = 1.8 mm * 2.5 mm
-> *Drill size for resistances and capacities = 2 mm
-> *Pad size for resistances and capacities = 0.8 mm
+> * Track length = 0.9 mm
+> * Isolation width = 0.7 mm
+> * Pad dimensions for OLED, Bluetooth module and rotary encoder = 2 mm * 2.5 mm
+> * Drill size for OLED, bluetooth module, rotary encoder, AOP and digital potentiometer = 1 mm
+> * Pad size for AOP and digital potentiometer = 1.8 mm * 2.5 mm
+> * Drill size for resistances and capacities = 2 mm
+> * Pad size for resistances and capacities = 0.8 mm
 > ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
 > Then, PCB was printed with 
