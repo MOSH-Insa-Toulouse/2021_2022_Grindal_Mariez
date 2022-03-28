@@ -41,5 +41,6 @@ Granulometric sensor project
 > * Pad size for AOP and digital potentiometer = 1.8 mm * 2.5 mm
 > * Drill size for resistances and capacities = 2 mm
 > * Pad size for resistances and capacities = 0.8 mm
+> * 
 > ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
 > Then, PCB was printed with 
