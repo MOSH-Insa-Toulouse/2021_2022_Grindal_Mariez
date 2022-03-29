@@ -16,7 +16,9 @@ Granulometric sensor project
 
 ### Electronic conception and test on LT-Spice
 > explain 
-> 
+
+![image](https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png)
+
 ### graphite sensor
 > explain
 > 
