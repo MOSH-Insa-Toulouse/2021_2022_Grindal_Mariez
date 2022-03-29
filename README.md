@@ -15,8 +15,16 @@ Granulometric sensor project
 * Datasheet writing
 
 ### Electronic conception and test on LT-Spice
-> explain 
-
+> With the LTSPICE simulator, we want to confirm the electrical circuit.  
+> * Check the operation in nominal conditions
+> * Impact of the LTC1050C amplifier offset acceptable
+> * Cutoff frequency of each low-pass filter stage 
+> * Global attenuation of a 50 Hz current noise
+> * Global attenuation of a current noise occurring at the aliasing limit frequency (in the case of Arduino Uno ADC)
+> * Simulation with :
+> * **a sensor, supplied with 5 volts, the conductance of which varies from 10 nS to 20 nS in 0.5 s**
+> * **a 230V RMS, 50Hz noise source, coupled with the input node through a 1pF capacitor**
+>
 ![image](https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png)
 
 ### graphite sensor
