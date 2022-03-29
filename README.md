@@ -14,23 +14,29 @@ Granulometric sensor project
 * Test
 * Datasheet writing
 
-### Electronic conception and test on LT-Spice
-> With the LTSPICE simulator, we want to confirm the electrical circuit. /n
+## Electronic conception and test on LT-Spice
+> With the LTSPICE simulator, we want to confirm the electrical circuit.
+> 
 > Check the operation in nominal conditions
+> 
 > Impact of the LTC1050C amplifier offset acceptable
+> 
 > Cutoff frequency of each low-pass filter stage 
+> 
 > Global attenuation of a 50 Hz current noise
+> 
 > Global attenuation of a current noise occurring at the aliasing limit frequency (in the case of Arduino Uno ADC)
+> 
 > Simulation with :
 > * a sensor, supplied with 5 volts, the conductance of which varies from 10 nS to 20 nS in 0.5 s
 > * a 230V RMS, 50Hz noise source, coupled with the input node through a 1pF capacitor
 >
 ![image](https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png)
 
-### graphite sensor
+## Graphite sensor
 > explain
 > 
-### Arduino code
+## Arduino code
 * **basic circuit, get the value from graphite sensor**
     > explain
 * **OLED**
@@ -40,10 +46,10 @@ Granulometric sensor project
 * **digital pot**
     > explain
 
-### Application code
+## Application code
 > explain
 > 
-### PCB conception on KiCad
+## PCB conception on KiCad
 > Circuit conception was made on KICAD. After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
 > * Isolation width = 0.7 mm
@@ -54,4 +60,9 @@ Granulometric sensor project
 > * Pad size for resistances and capacities = 0.8 mm
 > 
 > ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
-> Then, PCB was printed with 
+> Then, PCB was printed with different processes :
+> * Insolation with mask on copper with resine
+> * révélateur
+> * rince
+> * bain d'acide pour éliminer résine
+> * rince 
