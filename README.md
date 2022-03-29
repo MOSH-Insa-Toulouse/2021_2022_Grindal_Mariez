@@ -15,7 +15,7 @@ Granulometric sensor project
 * Datasheet writing
 
 ### Electronic conception and test on LT-Spice
-> With the LTSPICE simulator, we want to confirm the electrical circuit.  
+> With the LTSPICE simulator, we want to confirm the electrical circuit. /n
 > Check the operation in nominal conditions
 > Impact of the LTC1050C amplifier offset acceptable
 > Cutoff frequency of each low-pass filter stage 
