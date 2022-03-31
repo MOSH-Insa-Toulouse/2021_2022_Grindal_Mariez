@@ -61,8 +61,8 @@ Granulometric sensor project
 > 
 > ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
 > Then, PCB was printed with different processes :
-> * Insolation with mask on copper with resine
-> * révélateur
-> * rince
-> * bain d'acide pour éliminer résine
-> * rince 
+> * Mask printed on transparent film (PCB plan from KICAD) 
+> * The mask is placed on a plate of copper convered with photo-sensitive film. The mask and the plate are insolated with UV. The black part of the mask protects the photo-sensitive resin from UV, and the clear zone of the mask reveals copper beacause photo-sensitive resin reacts with UV.
+> * PCB plate is washed with a developper solution (oxydied water) that reveals the PCB circuit
+> * PCB plate is placed in oxyde bath to remove the unwanted copper not protected by photo-sensitive zone left.
+> * PCB is washed and drought
