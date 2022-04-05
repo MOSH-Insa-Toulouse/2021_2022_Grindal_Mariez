@@ -37,17 +37,24 @@ Granulometric sensor project
 > explain
 > 
 ## Arduino code
-* **basic circuit, get the value from graphite sensor**
+* **Amplifying circuit with precision zero drift op-amp LTC 1050**
     > explain
-* **OLED**
+* **I2C OLED display SBC-OLED01**
     > explain
-* **Bth** 
+* **Bluetooth module HC-05** 
     > explain
-* **digital pot**
+* **Digital potentiometer MCP41050**
     > explain
-
+* **Rotary encoder KY-040**
+    > explain
 ## Application code
-> explain
+> The Android application is made with the web application integrated development environment MIT App Inventor.
+> The app communicates over bluetooth with the HC-05 module mounted on the Arduino shield, and allows to measure
+> and trace resistance and voltage over time.
+> Main features:
+> * Display measured voltage and resistance numerically and traced as a function of time
+> * Update gain if modified on the shield
+> * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
 > 
 ## PCB conception on KiCad
 > Circuit conception was made on KICAD. After doing the schematic, we draw the PCB with the previous dimensions :
@@ -65,4 +72,4 @@ Granulometric sensor project
 > * The mask is placed on a plate of copper convered with photo-sensitive film. The mask and the plate are insolated with UV. The black part of the mask protects the photo-sensitive resin from UV, and the clear zone of the mask reveals copper beacause photo-sensitive resin reacts with UV.
 > * PCB plate is washed with a developper solution (oxydied water) that reveals the PCB circuit
 > * PCB plate is placed in oxyde bath to remove the unwanted copper not protected by photo-sensitive zone left.
-> * PCB is washed and drought
+> * PCB is washed and left to dry.
