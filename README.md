@@ -46,7 +46,7 @@ Granulometric sensor project
 * **Digital potentiometer MCP41050**
     > explain
 * **Rotary encoder KY-040**
-    > explain
+    > test
 ## Application code
 > The Android application is made with the web application integrated development environment MIT App Inventor.
 > The app communicates over bluetooth with the HC-05 module mounted on the Arduino shield, and allows to measure
