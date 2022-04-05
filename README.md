@@ -67,6 +67,7 @@ Granulometric sensor project
 > * Pad size for resistances and capacities = 0.8 mm
 > 
 > ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
+> ![image](https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png)
 > Then, PCB was printed with different processes :
 > * Mask printed on transparent film (PCB plan from KICAD) 
 > * The mask is placed on a plate of copper convered with photo-sensitive film. The mask and the plate are insolated with UV. The black part of the mask protects the photo-sensitive resin from UV, and the clear zone of the mask reveals copper beacause photo-sensitive resin reacts with UV.
