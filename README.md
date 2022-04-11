@@ -7,12 +7,12 @@ Granulometric sensor project
 
 ## Main steps
 * [Electrical conception and simulation on LTSpice](#electronic-conception-and-test-on-lt-spice)
-* Graphite sensor conception
-* PCB conception and printing
-* Circuit conception
-* Arduino code
-* Test
-* Datasheet writing
+* [Graphite sensor conception](#graphite-sensor)
+* [PCB conception and printing](#pcb-conception-on-kicad)
+* [Circuit conception](#application-code)
+* [Arduino code]()
+* [Test]()
+* [Datasheet writing]()
 
 ## Electronic conception and test on LT-Spice
 > With the LTSPICE simulator, we want to confirm the electrical circuit.
