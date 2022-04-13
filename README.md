@@ -32,7 +32,7 @@ Granulometric sensor project
 > * a 230V RMS, 50Hz noise source, coupled with the input node through a 1pF capacitor
 >
 ![image](https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png)
-<img src="https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png" width="200" height="100" />
+<img src="https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png" width="500" />
 
 ## Graphite sensor
 > explain
