@@ -31,7 +31,6 @@ Granulometric sensor project
 > * a sensor, supplied with 5 volts, the conductance of which varies from 10 nS to 20 nS in 0.5 s
 > * a 230V RMS, 50Hz noise source, coupled with the input node through a 1pF capacitor
 >
-![image](https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png)
 <img src="https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png" width="1000" />
 
 ## Graphite sensor
@@ -67,8 +66,8 @@ Granulometric sensor project
 > * Drill size for resistances and capacities = 2 mm
 > * Pad size for resistances and capacities = 0.8 mm
 > 
-> ![image](https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png)
-> ![image](https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png)
+> <img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="800" />
+> <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="800" />
 > Then, PCB was printed with different processes :
 > * Mask printed on transparent film (PCB plan from KICAD) 
 > * The mask is placed on a plate of copper convered with photo-sensitive film. The mask and the plate are insolated with UV. The black part of the mask protects the photo-sensitive resin from UV, and the clear zone of the mask reveals copper beacause photo-sensitive resin reacts with UV.
