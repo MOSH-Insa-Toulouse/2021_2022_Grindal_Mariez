@@ -66,8 +66,7 @@ Granulometric sensor project
 > * Drill size for resistances and capacities = 2 mm
 > * Pad size for resistances and capacities = 0.8 mm
 
-<img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="400" > 
-<img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="400" >
+<img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="400" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="400" >
 
 > Then, PCB was printed with different processes :
 > * Mask printed on transparent film (PCB plan from KICAD) 
