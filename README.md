@@ -14,8 +14,8 @@ The objective of the project is to design and build a PCB shield including a low
 
 ## Graphite sensor conception
 The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a 2B pencil as you can see on the image below.
-<p align="center">
-<img src="https://user-images.githubusercontent.com/95586528/163388353-763bedf1-8f6d-4edf-8d04-aa12be2c5277.jpg" width="350" />
+<p align="center"> 
+<img src="Illustrations/graphite_paper_sensor.jpg" width="350" />
     
 ## Electronic conception and test on LT-Spice
 The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise). We also have to take into account the chracteritic of the arduino uno card we are gonna use:
@@ -27,7 +27,7 @@ The second step is to build the electrical circuit adapted to our case. The aim 
 Graphite sensor is supplied by 5V and gives resistance values between 20MΩ and 100MΩ. Direct measurement of a 100 nA current does not seem feasible. We have to amplifiy the signal and to filter it.
 The final electrical circuit chosen is the following:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/95586528/163395406-638d8381-9cf3-4b6e-bb71-4973761aaf2c.png" width="500" />
+<img src="Illustrations/elec_circuit_ltspice.png" width="500" />
  
 The circuit characteritics are: 
 * R5 at the input protects the operational amplifier against electrostatic discharges (ESD), and together with C1 makes up a filter for voltage noises
@@ -39,14 +39,14 @@ The circuit characteritics are:
  
 Sensor resistance can be calculated by the equation below:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/95586528/163400193-6fde259e-b5ec-43f1-a274-3244ab76b3d7.png" width="250" />
+<img src="Illustrations/formula.png" width="250" />
  
 For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
 * Low-pass filter 1 (before the amplifier, we put C4 and C2 to zero) : 16kHz
 * Low-pass filter 2 (just after the amplifier, we put C1 and C2 to zero) : 2,1 kHz
 * Low-pass filter 3 (R6 et C2, we put C1 and C4 to zero) : 1,6 kHz
 The global attenuation of the circuit gives the Bode diagram below :
-<img src="https://user-images.githubusercontent.com/95586528/163408891-8d20ef33-882a-4d2f-a5ff-70c70ba7da0f.png" width="900" />
+<img src="Illustrations/bode_diagram_spice.png" width="900" />
  
 * The gain of the circuit is approximatively 10e7, or 140 dB.
 * The Global attenuation of a 50 Hz current noise is about 100 dB or 10e5. 
@@ -54,10 +54,10 @@ The global attenuation of the circuit gives the Bode diagram below :
 
 The transient simulation with resistance R2 varying between 100Ω and 2kΩ (step of 100Ω) gives the curves below.
     
-<img src="https://user-images.githubusercontent.com/95586528/163407519-419b99d6-7e3b-4547-8128-4a8ec98943ed.png" width="900" />
+<img src="Illustrations/transient_sim.png" width="900" />
 
 If we simulate the impact of the noise from sector (50 Hz), we obtain the curves below. 
-<img src="https://user-images.githubusercontent.com/95586528/163407799-2aa861aa-f9b8-4edb-ac0e-2fa548dace68.png" width="900" />
+<img src="Illustrations/transient_sim_with_noise.png" width="900" />
 
 The folder "Electrical simulation and schematic" contains the LT-Spice files used into different simulations. 
 
@@ -78,12 +78,12 @@ Circuit conception was made on KICAD.
 > * Pad size for resistances and capacities = 0.8 mm
 > For each component, we have to find the print associated or to make it into a new libary (for rotary encoder, OLED screen, LTC1050 and digital potentiomter). After placing the components in the optimal way, we trace the wires and make the ground plane.
 >
-> <img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="400" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="400" >
+> <img src="Illustrations/PCB_circuit.png" width="400" > <img src="Illustrations/PCB_circuit_mask.png" width="400" >
 >    
 > 
 > Finally, a 3D visualisation is possisble. 
 > 
-> <img src="https://user-images.githubusercontent.com/95586528/163414646-eeac6dbb-384b-40a3-89e2-7b686eea7a76.png" width="500" >
+> <img src="Illustrations/PCB_3D_visualisation_KiCad.png" width="500" >
 >
 > All KICAD files are into the folder "Projet2022_grindal_mariez_pcb".
 
@@ -96,7 +96,7 @@ Circuit conception was made on KICAD.
 > * PCB is washed and left to dry.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/95586528/163412305-92875ef5-d6a3-4d0d-8853-9bbc037964a5.jpg" width="300" >
+<img src="Illustrations/final_sensor_circuit.png" width="300" >
     
 ## Arduino code
 * **Amplifying circuit with precision zero drift op-amp LTC 1050**
