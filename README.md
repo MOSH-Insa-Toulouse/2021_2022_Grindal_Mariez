@@ -18,7 +18,33 @@
 > <img src="https://user-images.githubusercontent.com/95586528/163388353-763bedf1-8f6d-4edf-8d04-aa12be2c5277.jpg" width="350" />
     
 ## Electronic conception and test on LT-Spice
-> The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise).
+> The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise). We also have to take into account the chracteritic of the arduino uno card we are gonna use:
+> * Resolution 10 to 12 bits (1024 à 4096 points)
+> * Full scale (VRef) : 1.1 V to 5.0 V
+> * Max source impedance 1 kOhm to 10 kOhm
+> * Max sampling frequency 15 kHz to 2.4 MHz
+> 
+> Graphite sensor is supplied by 5V and gives resistance values between 20MΩ and 100MΩ. Direct measurement of a 100 nA current does not seem feasible. We have to amplifiy the signal and to filter it.
+> The final electrical circuit chosen is the following:
+> <p align="center">
+> <img src="https://user-images.githubusercontent.com/95586528/163395406-638d8381-9cf3-4b6e-bb71-4973761aaf2c.png" width="500" />
+> 
+> The circuit characteritics are: 
+> * R5 at the input protects the operational amplifier against electrostatic discharges (ESD), and together with C1 makes up a filter for voltage noises
+> * C1 with R1 makes up a filter for the current noise
+> * R2 is replaceable, in order to allow an adaptaion of the full scale range (digital potentiometer)
+> * C4 with R3 makes up the active filter
+> * C2 with R6 makes up the passive output filter
+> * C3 filters out the power supply noise
+> 
+> Sensor resistance can be calculated by the equation below:
+> <p align="center">
+> <img src="https://user-images.githubusercontent.com/95586528/163400193-6fde259e-b5ec-43f1-a274-3244ab76b3d7.png" width="250" />
+> 
+> For each 
+>
+>
+>
 > Check the operation in nominal conditions
 > 
 > Impact of the LTC1050C amplifier offset acceptable
@@ -35,6 +61,7 @@
 >
 <img src="https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png" width="1000" />
 
+    
 ## Graphite sensor
 > explain
 > 
