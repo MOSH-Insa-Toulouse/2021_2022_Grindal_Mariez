@@ -62,11 +62,12 @@ If we simulate the impact of the noise from sector (50 Hz), we obtain the curves
 The folder "Electrical simulation and schematic" contains the LT-Spice files used into different simulations. 
 
 ## PCB conception on KiCad
-    ### Circuit schematic on KICAD
-> Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KICAD. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
-> Circuit conception was made on KICAD. 
+Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KICAD. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
+Circuit conception was made on KICAD. 
+#### Circuit schematic on KICAD
+> The electrical circuit was made in KICAD. All pins and connections are established. For each components, we have to associate the print. For LTC1050, rotary encoder, digital potentiometer and OLED screen, we have to create our own print in our own library. The schematic is made from a model with Arduino Uno shield to have directtly the right pins and the good dimensions of the card.
     
-    ### PCB conception on KICAD
+#### PCB conception on KICAD
 > After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
 > * Isolation width = 0.7 mm
@@ -75,10 +76,18 @@ The folder "Electrical simulation and schematic" contains the LT-Spice files use
 > * Pad size for AOP and digital potentiometer = 1.8 mm * 2.5 mm
 > * Drill size for resistances and capacities = 2 mm
 > * Pad size for resistances and capacities = 0.8 mm
+> For each component, we have to find the print associated or to make it into a new libary (for rotary encoder, OLED screen, LTC1050 and digital potentiomter). After placing the components in the optimal way, we trace the wires and make the ground plane.
+>
+> <img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="500" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="500" >
+>    
+> 
+> Finally, a 3D visualisation is possisble. 
+> 
+> <img src="https://user-images.githubusercontent.com/95586528/163414646-eeac6dbb-384b-40a3-89e2-7b686eea7a76.png" width="500" >
+>
+> All KICAD files are into the folder 
 
-<img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="500" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="500" >
-
-    ### PCB printing
+#### PCB printing
 > Then, PCB was printed with different processes :
 > * Mask printed on transparent film (PCB plan from KICAD) 
 > * The mask is placed on a plate of copper convered with photo-sensitive film. The mask and the plate are insolated with UV. The black part of the mask protects the photo-sensitive resin from UV, and the clear zone of the mask reveals copper beacause photo-sensitive resin reacts with UV.
@@ -86,7 +95,8 @@ The folder "Electrical simulation and schematic" contains the LT-Spice files use
 > * PCB plate is placed in oxyde bath to remove the unwanted copper not protected by photo-sensitive zone left.
 > * PCB is washed and left to dry.
 
-<img src="https://user-images.githubusercontent.com/95586528/163412305-92875ef5-d6a3-4d0d-8853-9bbc037964a5.jpg" width="500" >
+<p align="center">
+<img src="https://user-images.githubusercontent.com/95586528/163412305-92875ef5-d6a3-4d0d-8853-9bbc037964a5.jpg" width="300" >
     
 ## Arduino code
 * **Amplifying circuit with precision zero drift op-amp LTC 1050**
