@@ -4,7 +4,7 @@
 > The objective of the projetc is to design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
 ## Main steps of the project
-* [Graphite sensor conception](#graphite-sensor)
+* [Graphite sensor conception](#graphite-sensor-conception)
 * [Electrical conception and simulation on LTSpice](#electronic-conception-and-test-on-lt-spice)
 * [PCB conception and printing](#pcb-conception-on-kicad)
 * [Arduino code](#arduino-code)
@@ -41,30 +41,22 @@
 > <p align="center">
 > <img src="https://user-images.githubusercontent.com/95586528/163400193-6fde259e-b5ec-43f1-a274-3244ab76b3d7.png" width="250" />
 > 
-> For each 
+> For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
+> * Low-pass filter 1 (before the amplifier, we put C4 and C2 to zero) : 16kHz
+> * Low-pass filter 2 (just after the amplifier, we put C1 and C2 to zero) : 2,1 kHz
+> * Low-pass filter 3 (R6 et C2, we put C1 and C4 to zero) : 1,6 kHz
+> The global attenuation of the circuit gives the Bode diagram below :
+> <img src="https://user-images.githubusercontent.com/95586528/163408891-8d20ef33-882a-4d2f-a5ff-70c70ba7da0f.png" width="900" />
+> 
+> The gain of the circuit is approximatively 10e7, or 140 dB. The Global attenuation of a 50 Hz current noise is about 100 dB or 10e5. The offset of the LTC1050 is about 5 µV wich is acceptable because it is much lower than the voltage measured to ouputs of the resistance R1 of 10mV (and the maximum offset voltage drift is about 0.05μV/°C).
+> The transient simulation with resistance R2 varying between 100Ω and 2kΩ (step of 100Ω) gives the curves below.
+> <img src="https://user-images.githubusercontent.com/95586528/163407519-419b99d6-7e3b-4547-8128-4a8ec98943ed.png" width="900" />
 >
+> If we simulate the impact of the noise from sector (50 Hz), we obtain the curves below. 
+> <img src="https://user-images.githubusercontent.com/95586528/163407799-2aa861aa-f9b8-4edb-ac0e-2fa548dace68.png" width="900" />
 >
->
-> Check the operation in nominal conditions
-> 
-> Impact of the LTC1050C amplifier offset acceptable
-> 
-> Cutoff frequency of each low-pass filter stage 
-> 
-> Global attenuation of a 50 Hz current noise
-> 
-> Global attenuation of a current noise occurring at the aliasing limit frequency (in the case of Arduino Uno ADC)
-> 
-> Simulation with :
-> * a sensor, supplied with 5 volts, the conductance of which varies from 10 nS to 20 nS in 0.5 s
-> * a 230V RMS, 50Hz noise source, coupled with the input node through a 1pF capacitor
->
-<img src="https://user-images.githubusercontent.com/95586528/160655085-99379685-04d5-4e0f-9d88-0ecf0dfbc2ce.png" width="1000" />
+> The folder "Electrical simulation and schematic" contains the LT-Spice files used into different simulations. 
 
-    
-## Graphite sensor
-> explain
-> 
 ## Arduino code
 * **Amplifying circuit with precision zero drift op-amp LTC 1050**
     > explain
