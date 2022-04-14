@@ -1,26 +1,26 @@
 # 2021_2022_Grindal_Mariez
 
 ## Objective of the project
-> "Design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application"
-> The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
-## The main steps of the project
+<div style="text-align: right"> The objective of the projetc is to design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet. </div>
+
+## Main steps of the project
 * [Graphite sensor conception](#graphite-sensor)
-    > The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a 2B pencil as you can see on the image below.
-    > <p align="center">
-    > <img src="https://user-images.githubusercontent.com/95586528/163388353-763bedf1-8f6d-4edf-8d04-aa12be2c5277.jpg" width="350" />
 * [Electrical conception and simulation on LTSpice](#electronic-conception-and-test-on-lt-spice)
-    > The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise).
 * [PCB conception and printing](#pcb-conception-on-kicad)
-* Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KICAD. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
-* [getting the sensor values, using the OLED, the encoder and the digital poten](#application-code)
-* [Arduino code]()
-* [Test]()
-* [Datasheet writing]()
+* [Arduino code](#arduino-code)
+* [Application ANDROID](#application-android)
+* [Test bed and critical analysis](#test-bed-and-critical-analysis)
+* [Datasheet](#datasheet)
 
+## Graphite sensor conception
+> The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a 2B pencil as you can see on the image below.
+> <p align="center">
+> <img src="https://user-images.githubusercontent.com/95586528/163388353-763bedf1-8f6d-4edf-8d04-aa12be2c5277.jpg" width="350" />
+    
 ## Electronic conception and test on LT-Spice
-> With the LTSPICE simulator, we want to confirm the electrical circuit.
-> 
+> The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise).
+
 > Check the operation in nominal conditions
 > 
 > Impact of the LTC1050C amplifier offset acceptable
@@ -61,6 +61,7 @@
 > * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
 > 
 ## PCB conception on KiCad
+> Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KICAD. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
 > Circuit conception was made on KICAD. After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
 > * Isolation width = 0.7 mm
@@ -78,3 +79,9 @@
 > * PCB plate is washed with a developper solution (oxydied water) that reveals the PCB circuit
 > * PCB plate is placed in oxyde bath to remove the unwanted copper not protected by photo-sensitive zone left.
 > * PCB is washed and left to dry.
+
+## Application ANDROID
+    
+## Test bed and critical analysis
+    
+## Datasheet
