@@ -1,7 +1,7 @@
 # 2021_2022_Grindal_Mariez
 
 ## Objective of the project
-The objective of the projetc is to design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
+The objective of the project is to design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
 ## Main steps of the project
 * [Graphite sensor conception](#graphite-sensor-conception)
@@ -78,14 +78,14 @@ Circuit conception was made on KICAD.
 > * Pad size for resistances and capacities = 0.8 mm
 > For each component, we have to find the print associated or to make it into a new libary (for rotary encoder, OLED screen, LTC1050 and digital potentiomter). After placing the components in the optimal way, we trace the wires and make the ground plane.
 >
-> <img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="500" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="500" >
+> <img src="https://user-images.githubusercontent.com/95586528/160405697-4437e986-bbf9-4ef6-8740-eef16d24775e.png" width="450" > <img src="https://user-images.githubusercontent.com/95586528/161790320-d46b58c9-d5bd-42f4-93e7-d98bd206e1a1.png" width="450" >
 >    
 > 
 > Finally, a 3D visualisation is possisble. 
 > 
 > <img src="https://user-images.githubusercontent.com/95586528/163414646-eeac6dbb-384b-40a3-89e2-7b686eea7a76.png" width="500" >
 >
-> All KICAD files are into the folder 
+> All KICAD files are into the folder "Projet2022_grindal_mariez_pcb".
 
 #### PCB printing
 > Then, PCB was printed with different processes :
