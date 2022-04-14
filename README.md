@@ -96,7 +96,7 @@ Circuit conception was made on KICAD.
 > * PCB is washed and left to dry.
 
 <p align="center">
-<img src="Illustrations/final_sensor_circuit.png" width="300" >
+<img src="Illustrations/final sensor_circuit.jpg" width="300" >
     
 ## Arduino code
 * **Amplifying circuit with precision zero drift op-amp LTC 1050**
