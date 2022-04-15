@@ -62,12 +62,12 @@ If we simulate the impact of the noise from sector (50 Hz), we obtain the curves
 The folder "Electrical simulation and schematic" contains the LT-Spice files used into different simulations. 
 
 ## PCB conception on KiCad
-Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KICAD. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
-Circuit conception was made on KICAD. 
-#### Circuit schematic on KICAD
-> The electrical circuit was made in KICAD. All pins and connections are established. For each components, we have to associate the print. For LTC1050, rotary encoder, digital potentiometer and OLED screen, we have to create our own print in our own library. The schematic is made from a model with Arduino Uno shield to have directtly the right pins and the good dimensions of the card.
+Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KiCad. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
+Circuit conception was made on KiCad. 
+#### Circuit schematic on KiCad
+> The electrical circuit was made in KiCad. All pins and connections are established. For each components, we have to associate the print. For LTC1050, rotary encoder, digital potentiometer and OLED screen, we have to create our own print in our own library. The schematic is made from a model with Arduino Uno shield to have directtly the right pins and the good dimensions of the card.
     
-#### PCB conception on KICAD
+#### PCB conception on KiCad
 > After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
 > * Isolation width = 0.7 mm
@@ -85,7 +85,7 @@ Circuit conception was made on KICAD.
 > 
 > <img src="Illustrations/PCB_3D_visualisation_KiCad.png" width="500" >
 >
-> All KICAD files are into the folder "Projet2022_grindal_mariez_pcb".
+> All KiCad files are into the folder "Projet2022_grindal_mariez_pcb".
 
 #### PCB printing
 > Then, PCB was printed with different processes :
