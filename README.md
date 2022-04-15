@@ -1,11 +1,11 @@
 # 2021_2022_Grindal_Mariez
 
 ## Objective of the project
-The objective of the project is to design and build a PCB shield including a low-tech graphite strain sensor coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
+The objective of the project is to design and build a PCB shield including a **low-tech graphite strain sensor** coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
 ## Main steps of the project
 * [Graphite sensor conception](#graphite-sensor-conception)
-* [Electrical conception and simulation on LTSpice](#electronic-conception-and-test-on-lt-spice)
+* [Electrical conception and simulation on *LTSpice*](#electronic-conception-and-test-on-lt-spice)
 * [PCB conception and printing](#pcb-conception-on-kicad)
 * [Arduino code](#arduino-code)
 * [Application ANDROID](#application-android)
@@ -61,13 +61,13 @@ If we simulate the impact of the noise from sector (50 Hz), we obtain the curves
 
 The folder "Electrical simulation and schematic" contains the LT-Spice files used into different simulations. 
 
-## PCB conception on KiCad
-Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic into KiCad. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
-Circuit conception was made on KiCad. 
-#### Circuit schematic on KiCad
+## PCB conception on _KiCad_
+Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic in *KiCad*. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
+Circuit conception was made on *KiCad*. 
+#### Circuit schematic on *KiCad*
 > The electrical circuit was made in KiCad. All pins and connections are established. For each components, we have to associate the print. For LTC1050, rotary encoder, digital potentiometer and OLED screen, we have to create our own print in our own library. The schematic is made from a model with Arduino Uno shield to have directtly the right pins and the good dimensions of the card.
     
-#### PCB conception on KiCad
+#### PCB conception on _KiCad_
 > After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
 > * Isolation width = 0.7 mm
@@ -78,14 +78,16 @@ Circuit conception was made on KiCad.
 > * Pad size for resistances and capacities = 0.8 mm
 > For each component, we have to find the print associated or to make it into a new libary (for rotary encoder, OLED screen, LTC1050 and digital potentiomter). After placing the components in the optimal way, we trace the wires and make the ground plane.
 >
+> <p align="center">
 > <img src="Illustrations/PCB_circuit.png" width="350" > <img src="Illustrations/PCB_circuit_mask.png" width="350" >
 >    
-> 
+> <p align="center">
 > Finally, a 3D visualisation is possisble. 
 > 
-> <img src="Illustrations/PCB_3D_visualisation_KiCad.png" width="500" >
->
-> All KiCad files are into the folder "Projet2022_grindal_mariez_pcb".
+> <p align="center">
+> <img src="Illustrations/PCB_3D_visualisation_KiCad.png" width="350" >
+> <p align="center">
+> All *KiCad* files are into the folder "Projet2022_grindal_mariez_pcb".
 
 #### PCB printing
 > Then, PCB was printed with different processes :
