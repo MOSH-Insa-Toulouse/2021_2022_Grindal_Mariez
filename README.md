@@ -68,6 +68,9 @@ Circuit conception was made on *KiCad*.
 #### Circuit schematic on *KiCad*
 > The electrical circuit was made in KiCad. All pins and connections are established. For each components, we have to associate the print. For LTC1050, rotary encoder, digital potentiometer and OLED screen, we have to create our own print in our own library. The schematic is made from a model with Arduino Uno shield to have directtly the right pins and the good dimensions of the card.
     
+<p align="center">
+<img src="Illustrations/prints.png" width="1000" />
+    
 #### PCB conception on _KiCad_
 > After doing the schematic, we draw the PCB with the previous dimensions :
 > * Track length = 0.9 mm
