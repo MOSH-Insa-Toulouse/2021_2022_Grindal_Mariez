@@ -45,6 +45,7 @@ For each electrical stage, we can simulate the cuttoff frequency by putting the 
 * Low-pass filter 1 (before the amplifier, we put C4 and C2 to zero) : 16kHz
 * Low-pass filter 2 (just after the amplifier, we put C1 and C2 to zero) : 2,1 kHz
 * Low-pass filter 3 (R6 et C2, we put C1 and C4 to zero) : 1,6 kHz
+    
 The global attenuation of the circuit gives the Bode diagram below :
 <img src="Illustrations/bode_diagram_spice.png" width="900" />
  
