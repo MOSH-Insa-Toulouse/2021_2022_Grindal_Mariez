@@ -49,7 +49,7 @@ For each electrical stage, we can simulate the cuttoff frequency by putting the 
 The global attenuation of the circuit gives the Bode diagram below :
 <img src="Illustrations/bode_diagram_spice.png" width="900" />
  
-* The gain of the circuit is approximatively 500.
+* The gain of the circuit is approximatively 140 dB or 10e7.
 * The Global attenuation of a 50 Hz current noise is about 100 dB or 10e5. 
 * The offset of the LTC1050 is about 5 µV wich is acceptable because it is much lower than the voltage measured to ouputs of the resistance R1 of 10mV (and the maximum offset voltage drift is about 0.05μV/°C).
 
