@@ -78,7 +78,7 @@ Circuit conception was made on KICAD.
 > * Pad size for resistances and capacities = 0.8 mm
 > For each component, we have to find the print associated or to make it into a new libary (for rotary encoder, OLED screen, LTC1050 and digital potentiomter). After placing the components in the optimal way, we trace the wires and make the ground plane.
 >
-> <img src="Illustrations/PCB_circuit.png" width="200" > <img src="Illustrations/PCB_circuit_mask.png" width="200" >
+> <img src="Illustrations/PCB_circuit.png" width="350" > <img src="Illustrations/PCB_circuit_mask.png" width="350" >
 >    
 > 
 > Finally, a 3D visualisation is possisble. 
