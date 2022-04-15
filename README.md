@@ -13,12 +13,12 @@ The objective of the project is to design and build a PCB shield including a **l
 * [Datasheet](#datasheet)
 
 ## Graphite sensor conception
-The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a 2B pencil as you can see on the image below.
+The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a pencil as you can see on the image below. You can adjust the amount of graphite by adding or erasing graphite. You can also use different type of pencil : 3B, 2B, 3H, etc. The graphite zone is describing a "U" shape as you can see below.
 <p align="center"> 
 <img src="Illustrations/graphite_paper_sensor.jpg" width="350" />
     
 ## Electronic conception and test on LT-Spice
-The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise). We also have to take into account the chracteritic of the arduino uno card we are gonna use:
+The second step is to build the electrical circuit adapted to our case. Strain sensor is a passive sensor and needs a conditionner. The output signal od the sensor is very low and can be easily interfered by noise (from the circuit or external noise). The aim of this part is to chose the good components to have the good filters and amplifiers. We also have to take into account the chracteritic of the arduino uno card we are gonna use:
 * Resolution 10 to 12 bits (1024 à 4096 points)
 * Full scale (VRef) : 1.1 V to 5.0 V
 * Max source impedance 1 kOhm to 10 kOhm
@@ -124,5 +124,6 @@ Main features:
 * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
  
 ## Test bed and critical analysis
-    
+  
 ## Datasheet
+Datesheet is providing the main characteritics and technical specifications of the strain sensor. It is in the folder "Datasheet" of the repository. 
