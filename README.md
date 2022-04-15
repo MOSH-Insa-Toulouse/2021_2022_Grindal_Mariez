@@ -15,7 +15,7 @@ The objective of the project is to design and build a PCB shield including a **l
 ## Graphite sensor conception
 The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a 2B pencil as you can see on the image below.
 <p align="center"> 
-<img src="Illustrations/graphite_paper_sensor.jpg" width="350" />
+<img src="Illustrations/schema.jpg" width="350" />
     
 ## Electronic conception and test on LT-Spice
 The second step is to build the electrical circuit adapted to our case. The aim of this part is to chose the good components to have the good filters and amplifiers because the signal from the sensor is very low and can be interfered by noise (from the circuit or external noise). We also have to take into account the chracteritic of the arduino uno card we are gonna use:
@@ -98,7 +98,7 @@ Circuit conception was made on *KiCad*.
 > * PCB is washed and left to dry.
 
 <p align="center">
-<img src="Illustrations/final sensor_circuit.jpg" width="300" >
+<img src="Illustrations/final_sensor_circuit.jpg" width="300" >
     
 ## Arduino code
 * **Amplifying circuit with precision zero drift op-amp LTC 1050**
