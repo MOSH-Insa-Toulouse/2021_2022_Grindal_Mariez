@@ -9,7 +9,7 @@ The objective of the project is to design and build a PCB shield including a **l
 * [PCB conception and printing](#pcb-conception-on-kicad)
 * [Arduino code](#arduino-code)
 * [Application ANDROID](#application-android)
-* [Test bed and critical analysis](#test-bed-and-critical-analysis)
+* [Test bed](#test-bed)
 * [Datasheet](#datasheet)
 
 ## Graphite sensor conception
@@ -123,7 +123,7 @@ Main features:
 * Update gain if modified on the shield
 * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
  
-## Test bed and critical analysis
+## Test bed
   
 ## Datasheet
 Datesheet is providing the main characteritics and technical specifications of the strain sensor. It is in the folder "Datasheet" of the repository. 
