@@ -158,6 +158,14 @@ Main features:
 
  
 ## Test bed
-  
+The six sensors were tested under compressive and tensile deflection on cylindrical objects with a constant diameter. The test bed consisted of seven cylindral objects with each a diameter ranging from 7 cm to 1,15 cm. The contact surface was covered in paper to minimize interactions between the object and the graphite layer on the sensor under compressive deflection.
+
+Test procedure
+>* The sensor was connected to the shield with two alligator clips. Voltage measurements indicated if the start voltage was near the extreme values of the range 0-5 V, indicating signal saturation in case of very high voltage and no current flowing in case of 0 V. Saturation of the signal was handled by choosing the "set gain" option in the menu to automatically adjust the gain to start at around 1 V. No signal was fixed by applying more graphite on the dotted area of the sensor.
+>* The R0 at zero derformation was measured when the sensor was pressed flat.
+>* Each sensor was first tested under tensile deflection, that is the graphite facing away from the curvature, with the assumption that the compressive deflection is more damaging to the sensor. The tensile deflection increases the distance between the graphite layers and decreases the measured voltage. The measurements were done in the order of decreasing diameter, starting with the smallest deformation to bend the paper sensor as little as possible to avoid detoriation.
+>* Graphite was reapplied on top of the old layer and a new R0 was measured when pressed flat.
+>* The same procedure was repeated for the compressive deflection with the sensor laying on a flat surface graphite layer up and bent upwards around the object while pressing the object gently downwards close to the edge of the table where the alligator clips were aligned. To avoid smearing of the graphite layer, especially for the 4B and 6B pencils, minimal friction was ensured between the sensor and the paper covered object. It is possible that smearing would have a minimal impact because the layer applied was thick. The measurements were done in the order of decreasing diameter, starting with the smallest deformation. 
+>* For compressive deflection, sudden drops in voltages occured for some of the sensors when repedately bending around the smallest objects and inducing large deformations. In those cases, graphite was reapplied on top of the old layer, a new R0 was measured when pressed flat and a new measurement series was conducted starting with the largest object.
 ## Datasheet
-Datesheet is providing the main characteritics and technical specifications of the strain sensor. It is in the folder "Datasheet" of the repository. 
+Datesheet is providing the main characteristics and technical specifications of the strain sensor. It is in the folder "Datasheet" of the repository. 
