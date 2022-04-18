@@ -86,12 +86,12 @@ Circuit conception was made on *KiCad*.
 > <img src="Illustrations/PCB_circuit.png" width="350" > <img src="Illustrations/PCB_circuit_mask.png" width="350" >
 >    
 > <p align="center">
-> Finally, a 3D visualisation is possisble. 
+> Finally, a 3D visualisation is possible. 
 > 
 > <p align="center">
 > <img src="Illustrations/PCB_3D_visualisation_KiCad.png" width="350" >
 > <p align="center">
-> All *KiCad* files are into the folder "Projet2022_grindal_mariez_pcb".
+> All *KiCad* files are in the folder "Projet2022_grindal_mariez_pcb".
 
 #### PCB printing
 > Then, PCB was printed with different processes :
@@ -105,23 +105,45 @@ Circuit conception was made on *KiCad*.
 <img src="Illustrations/final_sensor_circuit.jpg" width="300" >
     
 ## Arduino code
-* **Amplifying circuit with precision zero drift op-amp LTC 1050**
-    > explain
-* **I2C OLED display SBC-OLED01**
-    > explain
-* **Bluetooth module HC-05** 
-    > explain
-* **Digital potentiometer MCP41050**
-    > explain
-* **Rotary encoder KY-040**
-    > test
+Improvement potential for Arduino code
+>- Make the code run faster and more smoothly by optimizing menu management code. This can be done by decreasing the lines of code for the OLED display and assure the switch button on the rotary encoder, which is not connected to an interrupt pin, is detected regardless of the speed of the executing loop.  The number of variables in use for the menu, submenu and blocking the rotary encoder when needed should be reduced. Suboptimal solutions to ensure the screen is refreshed correctly can be improved upon.
+>- Decrease the time interval between two measurements, currently at 700 ms, to see how fast it can measure and decrease response time.
+    
+General structure of Arduino code
+>The Arduino code (.ino) is written in C++ with an addition of special methods and functions.
+The main text editing program used for this project is the Arduino Integrated Development Environment (IDE). It has a clean and simple interface with the option of showing a serial monitor and a serial plotter. The serial monitor is useful for checking the outcoming bytes from the board to the digital potentiometer MCP41050 and communication with the APK application via the Bluetooth module HC-05.
+    
+Libraries used 
+>* SoftwareSerial.h for defining serial ports on specific pins, here used with the Bluetooth module and digital potentiometer.
+>* Adafruit_GFX.h and Adafruit_SSD1306.h for the I2C OLED display SBC-OLED01.
+>* Wire.h contain the definitions for I2C pins used to communicate with the OLED display.
+>* SPI.h is used to communicate with SPI devices, with Arduino as the master device. The Serial Peripheral Interface (SPI) is a synchronous serial data protocol and is used with the digital potentiometer.
+
+The Arduino code is divided into four parts:
+>1. The first lines contain inclusions (#include) of libraries, definitions (#define), which is a C++ component that allows to give a name to a constant value before the program is compiled, and declarations of global variables.
+    
+>2. The setup() function, which initializes and sets the initial values, is executed only one time after powering on the Arduino board. 
+In this case, the mode of pins on the board are initialized with pinMode(), and digitalWrite() is used to turn on the pullup resistors for the rotary encoder KY-040. Data transfer through serial ports, SPI, SoftwareSerial and Serial, is enabled.
+    
+>3. The loop() function is the main part and runs continuously after the setup until the reset button is pressed or the power supply is cut.
+>
+>It is far from optimized and contain a lot of if-statements. First it checks to detect a change in the switch button, then checks if the APK application has asked for measurement data or an updated Rcal value to update the gain. Then it does a measurement if the interval requirement is met. The last part of the loop is a mix of rotary encoder and OLED display to make the menu and submenu options work. 
+    
+>4. The last part is constituted of definitions of the functions used in the loop function. Six functions are defined. 
+>* The first function reads the analog pin connected to the graphite device called readSensor() and returns the voltage in the range 0 – 5 V. 
+>* Two functions manages the digital potentiometer, setPot() and potSwiper(). setPot() changes dig. pot. position and updates Rcal and gain. potSwiper() uses setPot() and takes a float as input, with the goal to land on approximately the right voltage by running through the positions to find an adequate resistance value. 
+>* The OLEDstartup() function is simply the startup screen sequence, lasting around two seconds.
+>* The last functions doEncoderA() and doEncoderB() is attached to interrupts on both pins for the rotary encoder and includes debouncing, ensuring a rapid and accurate response to manual rotation of the encoder. The variable maxRot ensures a circular list regardless of scrolling through the menu or manually adjusting the gain.
+
   
-## Application ANDROID
-The Android application is made with the web application integrated development environment MIT App Inventor.The app communicates over bluetooth with the HC-05 module mounted on the Arduino shield, and allows to measure and trace resistance and voltage over time.
+## APK application
+The APK application, working on Android smartphones, is made with the free web application integrated development environment MIT App Inventor.The app communicates over Bluetooth with the HC-05 module mounted on the Arduino shield, and allows to measure and trace resistance and voltage over time.
 Main features:
 * Display measured voltage and resistance numerically and traced as a function of time
 * Update gain if modified on the shield
 * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
+    ![app_interface](https://user-images.githubusercontent.com/66969438/163869444-53c52d2b-c263-4734-80b9-e799d910cc87.jpg)
+
  
 ## Test bed
   
