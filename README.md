@@ -1,7 +1,7 @@
 # 2021_2022_Grindal_Mariez
 
 ## Objective of the project
-The objective of the project is to design and build a PCB shield including a **low-tech graphite strain sensor** coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure the deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
+The objective of the project is to design and build a PCB shield including a **low-tech graphite strain sensor** coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure a deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
 ## Main steps of the project
 * [Graphite sensor conception](#graphite-sensor-conception)
@@ -13,9 +13,22 @@ The objective of the project is to design and build a PCB shield including a **l
 * [Datasheet](#datasheet)
 
 ## Graphite sensor conception
-The first step is to make the graphite sensor. We just cut a piece of paper and put some graphite on it with a pencil as you can see on the image below. You can adjust the amount of graphite by adding or erasing graphite. You can also use different type of pencil : 3B, 2B, 3H, etc. The graphite zone is describing a "U" shape as you can see below.
+The first step is to make the graphite sensor with paper and a pencil. Pencil cores and lead mines used in mechanical pencils consist of a mixture clay and tiny scales of graphite that can slide on top of each other. The sensor outline is printed on a piece of thick printing paper, and the remaining work is simply to cut it out and fill in the dotted "U" shape with a pencil, as shown on the image below. 
 <p align="center"> 
 <img src="Illustrations/graphite_paper_sensor.jpg" width="350" />
+    
+The upside is that is allows to adjust the amount of graphite by adding or erasing the pencil mark containing graphite. The downside is the difficulty of reproducing the same sensor with the same graphite layer thickness and density of graphite. An additional problem regarding graphite is presented below.
+
+>Graphite grading scale problem
+
+![grapite_grading_scale](https://user-images.githubusercontent.com/66969438/163876203-b387ea2f-eabe-43c0-9a00-538d3d4588cc.jpg)
+   
+* There exists different graphite grading scales, with the numerical scale and the HB scale the two most widely used. The HB scale goes from 9B to 9H, “H” to indicate a hard pencil and “B” to designate the blackness of the pencil’s mark, indicating a softer lead and a higher proportion of graphite. 
+    
+* The problem when trying to reproduce a sensor is the lack of a specific industry standard for the darkness of the mark to be left within the HB or any other hardness grade scale. That implies that a HB pencil from one brand will not necessarily leave the same mark as a HB pencil from another brand. Most manufacturers set their own internal standards for graphite hardness grades and some differences are regional. For example in Japan, consumers tend to prefer softer darker leads, so an HB lead produced in Japan is generally softer and darker than an HB from European producers.
+* Specifying the exact product and manufacturer in addition to the graphite grading can increase the reproductibilty of the sensor.
+>* This project uses graphite from BIC Criterium 550 pencils with the gradings 6B, 4B, B, H and 3H. Special STEIN HB lead mines from Pentel is also used. STEIN stands for "Strongest Technology by Enhanced SiO2 Integrated Network" and have a 10 % denser core than an average HB lead mine. This can result in a different resistance range than a normal HB pencil despite applying it the same way with the same thickness etc.
+
     
 ## Electronic conception and test on LT-Spice
 The second step is to build the electrical circuit adapted to our case. Strain sensor is a passive sensor and needs a conditionner. The output signal od the sensor is very low and can be easily interfered by noise (from the circuit or external noise). The aim of this part is to chose the good components to have the good filters and amplifiers. We also have to take into account the chracteritic of the arduino uno card we are gonna use:
@@ -126,11 +139,10 @@ The Arduino code is divided into four parts:
 In this case, the mode of pins on the board are initialized with pinMode(), and digitalWrite() is used to turn on the pullup resistors for the rotary encoder KY-040. Data transfer through serial ports, SPI, SoftwareSerial and Serial, is enabled.
     
 >3. The loop() function is the main part and runs continuously after the setup until the reset button is pressed or the power supply is cut.
->
->It is far from optimized and contain a lot of if-statements. First it checks to detect a change in the switch button, then checks if the APK application has asked for measurement data or an updated Rcal value to update the gain. Then it does a measurement if the interval requirement is met. The last part of the loop is a mix of rotary encoder and OLED display to make the menu and submenu options work. 
+    It is far from optimized and contain a lot of if-statements. First it checks to detect a change in the switch button, then checks if the APK application has asked for measurement data or an updated Rcal value to update the gain. Then it does a measurement if the interval requirement is met. The last part of the loop is a mix of rotary encoder and OLED display to make the menu and submenu options work. 
     
 >4. The last part is constituted of definitions of the functions used in the loop function. Six functions are defined. 
->* The first function reads the analog pin connected to the graphite device called readSensor() and returns the voltage in the range 0 – 5 V. 
+>* The first function reads the analog pin connected to the sensor called readSensor() and returns the voltage in the range 0–5 V. 
 >* Two functions manages the digital potentiometer, setPot() and potSwiper(). setPot() changes dig. pot. position and updates Rcal and gain. potSwiper() uses setPot() and takes a float as input, with the goal to land on approximately the right voltage by running through the positions to find an adequate resistance value. 
 >* The OLEDstartup() function is simply the startup screen sequence, lasting around two seconds.
 >* The last functions doEncoderA() and doEncoderB() is attached to interrupts on both pins for the rotary encoder and includes debouncing, ensuring a rapid and accurate response to manual rotation of the encoder. The variable maxRot ensures a circular list regardless of scrolling through the menu or manually adjusting the gain.
