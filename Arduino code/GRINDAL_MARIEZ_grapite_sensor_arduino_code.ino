@@ -174,6 +174,7 @@ void loop(){
       maxRot = 255;
       lastReportedPos = encoderPos;
       setPot(pot0, encoderPos);
+      pos = encoderPos;
       OLED.clearDisplay();
       OLED.setCursor(0, 0);
       OLED.println("Dig, pot. position: ");     
@@ -226,7 +227,7 @@ void loop(){
         OLED.display();
         delay(500);
         OLED.clearDisplay();
-        encoderPos=pos;
+        pos=encoderPos;
         setGain = 1;}}
     else if ((submenu == 2) && (setGain != 1)){
       switch (lastReportedPos){ 
@@ -313,9 +314,10 @@ int potSwiper(float init_voltage) {
     if (VADC_new > init_voltage){
       if ((VADC_old > VADC_new) && (VADC_old != 0.0)){
         pos_init = i-1;  
-        pos = pos_init;
+        
         setPot(pot0, pos);
         break;}}}
+    pos = pos_init;
   return pos_init; 
 }
 
