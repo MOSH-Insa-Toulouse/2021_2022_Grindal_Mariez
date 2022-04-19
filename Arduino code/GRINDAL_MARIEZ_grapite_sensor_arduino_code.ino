@@ -114,7 +114,7 @@ void loop(){
     if (incomingByte==1){
       mode = 1;}
     else if (incomingByte==2){
-      sent=0;
+      sent = 0;
       mode = 2;}
     else {mode = incomingByte;}}
   
@@ -128,7 +128,7 @@ void loop(){
     VADC = 5.*ADCin/256. ;
     float Rs = (1.0+R3/Rcal)*R1*(VCC/VADC)-R1-R5;
     Mohms = Rs/1000000.;  
-    if (mode==1){
+    if (mode == 1){
       // send measurement to app
       mySerialBT.write(ADCin);}}
   
