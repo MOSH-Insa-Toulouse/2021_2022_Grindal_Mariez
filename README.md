@@ -154,7 +154,9 @@ Main features:
 * Display measured voltage and resistance numerically and traced as a function of time
 * Update gain if modified on the shield
 * Save measured data points in a text file found in the paths "/savedRfile.txt" and "/savedVfile.txt"
-    ![app_interface](https://user-images.githubusercontent.com/66969438/163869444-53c52d2b-c263-4734-80b9-e799d910cc87.jpg)
+    
+<p align="center"> 
+<img src="Illustrations/application_interface.jpg" width="300" />
 
  
 ## Test bed
