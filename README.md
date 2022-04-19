@@ -8,7 +8,7 @@ The objective of the project is to design and build a PCB shield including a **l
 * [Electrical conception and simulation on *LTSpice*](#electronic-conception-and-test-on-lt-spice)
 * [PCB conception and printing](#pcb-conception-on-kicad)
 * [Arduino code](#arduino-code)
-* [Application ANDROID](#application-android)
+* [Application ANDROID](#apk-application)
 * [Test bed](#test-bed)
 * [Datasheet](#datasheet)
 
@@ -40,7 +40,7 @@ The second step is to build the electrical circuit adapted to our case. Strain s
 Graphite sensor is supplied by 5V and gives resistance values between 20MΩ and 100MΩ. Direct measurement of a 100 nA current does not seem feasible. We have to amplifiy the signal and to filter it.
 The final electrical circuit chosen is the following:
 <p align="center">
-<img src="Illustrations/circuit_data.png" width="500" />
+<img src="Illustrations/circuit_data.png" width="900" />
  
 The circuit characteritics are: 
 * R5 at the input protects the operational amplifier against electrostatic discharges (ESD), and together with C1 makes up a filter for voltage noises
