@@ -21,7 +21,7 @@ The upside is that is allows to adjust the amount of graphite by adding or erasi
 
 >Graphite grading scale problem
 <p align="center"> 
-![grapite_grading_scale](https://user-images.githubusercontent.com/66969438/163876203-b387ea2f-eabe-43c0-9a00-538d3d4588cc.jpg)
+<img src="Illustrations/graphite_lead_grade.jpg" width="350" />
    
 * There exists different graphite grading scales, with the numerical scale and the HB scale the two most widely used. The HB scale goes from 9B to 9H, “H” to indicate a hard pencil and “B” to designate the blackness of the pencil’s mark, indicating a softer lead and a higher proportion of graphite. 
     
