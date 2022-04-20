@@ -20,7 +20,7 @@ The first step is to make the graphite sensor with paper and a pencil. Pencil co
 The upside is that is allows to adjust the amount of graphite by adding or erasing the pencil mark containing graphite. The downside is the difficulty of reproducing the same sensor with the same graphite layer thickness and density of graphite. An additional problem regarding graphite is presented below.
 
 >Graphite grading scale problem
-
+<p align="center"> 
 ![grapite_grading_scale](https://user-images.githubusercontent.com/66969438/163876203-b387ea2f-eabe-43c0-9a00-538d3d4588cc.jpg)
    
 * There exists different graphite grading scales, with the numerical scale and the HB scale the two most widely used. The HB scale goes from 9B to 9H, “H” to indicate a hard pencil and “B” to designate the blackness of the pencil’s mark, indicating a softer lead and a higher proportion of graphite. 
@@ -51,7 +51,8 @@ The circuit characteritics are:
 * C3 filters out the power supply noise
  
 Sensor resistance can be calculated by the equation below:
-
+<p align="center">
+<img src="Illustrations/formula_Rs.png" width="1000" />
  
 For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
 * Low-pass filter 1 (before the amplifier, we put C4 and C2 to zero) : 16kHz
