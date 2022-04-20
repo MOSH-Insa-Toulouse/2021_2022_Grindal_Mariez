@@ -1,7 +1,7 @@
 # 2021_2022_Grindal_Mariez
 
 ## Objective of the project
-The objective of the project is to design and build a PCB shield including a **low-tech graphite strain sensor** coupled to an analog electronic circuit that communicate data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure a deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
+The objective of the project is to design and build a PCB shield including a **low-tech graphite strain sensor** coupled to an analog electronic circuit that communicates data via a microcontroller to an Android application. The aim of this project is to get the resistance from a graphite sensor to measure a deformation, to analyze the results obtained and to describe the characteristics of the sensor in a datasheet.
 
 ## Main steps of the project
 * [Graphite sensor conception](#graphite-sensor-conception)
