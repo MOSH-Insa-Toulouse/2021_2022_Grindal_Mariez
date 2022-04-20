@@ -51,8 +51,7 @@ The circuit characteritics are:
 * C3 filters out the power supply noise
  
 Sensor resistance can be calculated by the equation below:
-<p align="center">
-<img src="Illustrations/formula.png" width="250" />
+
  
 For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
 * Low-pass filter 1 (before the amplifier, we put C4 and C2 to zero) : 16kHz
