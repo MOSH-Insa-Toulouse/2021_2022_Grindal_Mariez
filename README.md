@@ -67,9 +67,12 @@ The final electrical circuit chosen is the following:
  
 ### Low-pass filters
 > For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
-> * Low-pass filter 1 (C4 = C2 = 0) : 16kHz
-> * Low-pass filter 2 (C1 = C2 = 0) : 2,1 kHz
-> * Low-pass filter 3 (C1 = C4 = 0) : 1,6 kHz
+> * Low-pass filter 1 (C4 = C2 = 0) : 16kHz\
+>      To select signals with frequency less than 10*1.5kHz (sample frequency of the arduino card) to respect Shannon criteria
+> * Low-pass filter 2 (C1 = C2 = 0) : 2,1 kHz\
+>      To filter noises from sector of the power supply at 50 Hz
+> * Low-pass filter 3 (C1 = C4 = 0) : 1,6 kHz\
+       To filter global external noises of volateg and current
  
 ### Main characteristics of the electrical circuit
 > Global gain: from 3.13 to 127.9
@@ -79,6 +82,7 @@ The final electrical circuit chosen is the following:
 > Offset of the LTC1050 is about 5 µV wich is acceptable because much lower than the voltage measured to ouputs of the resistance R1 of 10mV (and the maximum offset voltage drift is about 0.05μV/°C).
 
 ### Simulations on *LT-Spice*
+> We simulate on *LT-Spice* 
 > The transient simulation with resistance R2 varying between 100Ω and 2kΩ (step of 100Ω) gives the curves below.
 >     
 <img src="Illustrations/transient_sim.png" width="900" />
