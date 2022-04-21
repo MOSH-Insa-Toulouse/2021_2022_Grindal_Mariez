@@ -171,7 +171,9 @@ In this case, the mode of pins on the board are initialized with pinMode(), and 
 >   * The OLEDstartup() function is simply the startup screen sequence, lasting around two seconds.
 >   * The last functions doEncoderA() and doEncoderB() is attached to interrupts on both pins for the rotary encoder and includes debouncing, ensuring a rapid and accurate response to manual rotation of the encoder. The variable maxRot ensures a circular list regardless of scrolling through the menu or manually adjusting the gain.
 
-Arduino code is available in the [Arduino code](2021_2022_Grindal_Mariez/Arduino code) section.
+Arduino code is available in the 
+   [Arduino code](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Arduino%20code)
+   section.
   
 # 5. APK application
 The APK application, working on Android smartphones, is made with the free web application integrated development environment MIT App Inventor.The app communicates over Bluetooth with the HC-05 module mounted on the Arduino shield, and allows to measure and trace resistance and voltage over time.
