@@ -122,7 +122,7 @@ Circuit conception was made on *KiCad*.
 > A 3D visualisation is possible and allowed us to well arrange components placement without spatial conflict. 
 
 All *KiCad* files are in the folder
-   [Projet2022_grindal_mariez_pcb](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Arduino%20code)
+   [Projet2022_grindal_mariez_pcb](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Projet2022_grindal_mariez_pcb)
    section.
 
 ### PCB printing processes
