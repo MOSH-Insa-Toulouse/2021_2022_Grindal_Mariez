@@ -90,7 +90,9 @@ The final electrical circuit chosen is the following:
 > If we simulate the impact of the noise from sector (50 Hz), we obtain the curves below. 
 <img src="Illustrations/transient_sim_with_noise.png" width="900" />
 
-The folder "2021_2022_Grindal_Mariez//" contains the LT-Spice files used into different simulations. 
+The folder 
+   [Electrical simulations on LT-Spice]https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Electrical%20simulations%20on%20LT-Spice 
+   contains the LT-Spice files used into different simulations. 
 
 # 3. PCB conception on _KiCad_
 Once the electrical circuit is done, we have to make the PCB conception to get the final circuit. First, we did the schematic in *KiCad*. Then, we build the PCB plane by adding the references and dimensions of each components. The final step is to print the PCB card with different processes.
