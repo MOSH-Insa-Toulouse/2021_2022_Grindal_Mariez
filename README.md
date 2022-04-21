@@ -59,7 +59,7 @@ The final electrical circuit chosen is the following:
 >   
 > C3 filters out the power supply noise
 >   
-> The digital potentiometer MCP41050 can change the gain and adapt it to the resistance value from the graphite sensor. Resistance of the digital potentiometer can vary between 330Ω and 50kΩ based on datasheet. 
+> The digital potentiometer MCP41050 can change the gain and adapt it to the resistance value from the graphite sensor. Resistance of the digital potentiometer can vary between 330 Ω and 50k Ω based on datasheet. 
  
 ### Sensor resistance calculation:
 <p align="center">
@@ -67,7 +67,7 @@ The final electrical circuit chosen is the following:
  
 ### Low-pass filters
 > For each electrical stage, we can simulate the cuttoff frequency by putting the capacity of each filter at zero:
-> * Low-pass filter 1 (C4 = C2 = 0) : 16kHz\
+> * Low-pass filter 1 (C4 = C2 = 0) : 16 kHz\
 >      To select signals with frequency less than 10*1.5kHz (sample frequency of the arduino card) to respect Shannon criteria
 > * Low-pass filter 2 (C1 = C2 = 0) : 2,1 kHz\
 >      To filter noises from sector of the power supply at 50 Hz
@@ -77,19 +77,34 @@ The final electrical circuit chosen is the following:
 ### Main characteristics of the electrical circuit
 > Global gain: from 3.13 to 127.9
 >
-> Global attenuation of a 50 Hz current noise: 100dB or 10e5
+> Global attenuation of a 50 Hz current noise: 100 dB or 10e5
 >
-> Offset of the LTC1050 is about 5 µV wich is acceptable because much lower than the voltage measured to ouputs of the resistance R1 of 10mV (and the maximum offset voltage drift is about 0.05μV/°C).
+> Offset of the LTC1050 is about 5 µV wich is acceptable because much lower than the voltage measured to ouputs of the resistance R1 of 10 mV (and the maximum offset voltage drift is about 0.05 μV/°C).
 
 ### Simulations on *LT-Spice*
-> We simulate on *LT-Spice* 
-> The transient simulation with resistance R2 varying between 100Ω and 2kΩ (step of 100Ω) gives the curves below.
->     
+> Simulations on LT-Spice allowed us to:
+> * To check the operation in nominal conditions
+> * To check the operation in nominal conditions
+> * To accept the impact of the LTC1050C amplifier offset
+> * To accept the impact of the amplifier input current
+> * To find the cuttoff frequency of each low-pass filter stage
+> * To find the global attenuation of a 50 Hz current noise
+> * To find the global attenuation of a current noise occurring at the aliasing limit frequency
+>
+> To check all these points, we did differents simulations:
+> * In transient conditions, with a pulse signal from the sensor
+> * In AC conditions, to see attenuation, gain and cuttoff frequencies
+> * In transient conditions, with AC voltage generator to simuate 50 Hz noise.
+> * In transient and AC conditions with resistance of the digital potentiometer varying from 1 kΩ to 40 kΩ (step of 1 kΩ) to see the influence of this component on ccircuit response.
+<div align="center"> 
 <img src="Illustrations/transient_sim.png" width="900" />
 
-> If we simulate the impact of the noise from sector (50 Hz), we obtain the curves below. 
+**Transient simulation with R2 varying between 1 kΩ to 40 kΩ**
+ 
 <img src="Illustrations/transient_sim_with_noise.png" width="900" />
 
+   **Transient simulation with with R2 varying between 1 kΩ to 40 kΩ and noise at 50 Hz (oscillations)**
+   <div align="left">   
 The folder 
    [Electrical simulations on LT-Spice](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Electrical%20simulations%20on%20LT-Spice) 
    contains the LT-Spice files used into different simulations. 
@@ -137,8 +152,12 @@ All *KiCad* files are in the folder [Projet2022_grindal_mariez_pcb](https://gith
 >
 > PCB is washed and left to dry.
 
-<p align="center">
+<div align="center"> 
 <img src="Illustrations/final_sensor_circuit.jpg" width="300" >
+   
+**Final PCB circuit with all components and modules. The two wires (at right, in purple) are  \
+   connected to the two pads of the graphite sensor with clamps.**
+<div align="left"> 
     
 # 4. Arduino code
 ### Improvement potential for Arduino code
