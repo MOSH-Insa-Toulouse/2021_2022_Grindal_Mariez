@@ -204,4 +204,5 @@ The six sensors were tested under compressive and tensile deflection on cylindri
 > For compressive deflection, sudden drops in voltages occured for some of the sensors when repedately bending around the smallest objects and inducing large deformations. In those cases, graphite was reapplied on top of the old layer, a new R0 was measured when pressed flat and a new measurement series was conducted starting with the largest object.
     
 # 7. Datasheet
-Datesheet is providing the main characteristics and technical specifications of the strain sensor. It is in the folder "Datasheet" of the repository. 
+Datesheet is providing the main characteristics and technical specifications of the strain sensor. It is in the folder [Datasheet](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Datasheet)
+   of the repository. 
