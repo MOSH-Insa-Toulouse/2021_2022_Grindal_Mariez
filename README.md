@@ -5,12 +5,13 @@ The objective of the project is to design and build a PCB shield including a **l
 
 # Main steps of the project
    [1. Graphite sensor conception](#1-graphite-sensor-conception)\
-   [2. Electrical conception and simulation on *LTSpice*](#2-electronic-conception-and-test-on-lt-spice)\
+   [2. Electrical conception and simulation on *LTSpice*](#2-electronic-conception-and-test-on-ltspice)\
    [3. PCB conception and printing](#3-pcb-conception-on-kicad)\
    [4. Arduino code](#4-arduino-code)\
    [5. Application ANDROID](#5-apk-application)\
    [6. Test bed](#6-test-bed)\
-   [7. Datasheet](#7-datasheet)
+   [7. Datasheet](#7-datasheet)\
+   [8. Limits](#8-limits)
 
 # 1. Graphite sensor conception
 The first step is to make the graphite sensor with paper and a pencil. Pencil cores and lead mines used in mechanical pencils consist of a mixture clay and tiny scales of graphite that can slide on top of each other. The sensor outline is printed on a piece of thick printing paper, and the remaining work is simply to cut it out and fill in the dotted "U" shape with a pencil, as shown on the image below. 
@@ -34,14 +35,14 @@ Specifying the exact product and manufacturer in addition to the graphite gradin
 > This project uses graphite from BIC Criterium 550 pencils with the gradings 6B, 4B, B, H and 3H. Special STEIN HB lead mines from Pentel is also used. STEIN stands for "Strongest Technology by Enhanced SiO2 Integrated Network" and have a 10 % denser core than an average HB lead mine. This can result in a different resistance range than a normal HB pencil despite applying it the same way with the same thickness etc.
 
     
-# 2. Electronic conception and test on LT-Spice
+# 2. Electronic conception and test on *LTSpice*
 The second step is to build the electrical circuit adapted to our case. Strain sensor is a passive sensor and needs a conditionner. The output signal od the sensor is very low and can be easily interfered by noise (from the circuit or external noise). The aim of this part is to chose the good components to have the good filters and amplifiers. We also have to take into account the chracteritic of the arduino uno card we are gonna use:
 * Resolution 10 to 12 bits (1024 à 4096 points)
 * Full scale (VRef) : 1.1 V to 5.0 V
 * Max source impedance 1 kOhm to 10 kOhm
 * Max sampling frequency 15 kHz to 2.4 MHz
  
-Graphite sensor is supplied by 5V and gives resistance values between 20MΩ and 100MΩ. Direct measurement of a 100 nA current does not seem feasible. We have to amplifiy the signal and to filter it.
+Graphite sensor is supplied by 5 V and gives resistance values between 20 MΩ and 100 MΩ. Direct measurement of a 100 nA current does not seem feasible. We have to amplifiy the signal and to filter it.
 The final electrical circuit chosen is the following:
 <p align="center">
 <img src="Illustrations/circuit_data.png" width="900" />
@@ -72,7 +73,7 @@ The final electrical circuit chosen is the following:
 > * Low-pass filter 2 (C1 = C2 = 0) : 2,1 kHz\
 >      To filter noises from sector of the power supply at 50 Hz
 > * Low-pass filter 3 (C1 = C4 = 0) : 1,6 kHz\
-       To filter global external noises of volateg and current
+       To filter global external noises of voltage and current
  
 ### Main characteristics of the electrical circuit
 > Global gain: from 3.13 to 127.9
@@ -81,7 +82,7 @@ The final electrical circuit chosen is the following:
 >
 > Offset of the LTC1050 is about 5 µV wich is acceptable because much lower than the voltage measured to ouputs of the resistance R1 of 10 mV (and the maximum offset voltage drift is about 0.05 μV/°C).
 
-### Simulations on *LT-Spice*
+### Simulations on *LTSpice*
 > Simulations on LT-Spice allowed us to:
 > * To check the operation in nominal conditions
 > * To check the operation in nominal conditions
@@ -95,16 +96,20 @@ The final electrical circuit chosen is the following:
 > * In transient conditions, with a pulse signal from the sensor
 > * In AC conditions, to see attenuation, gain and cuttoff frequencies
 > * In transient conditions, with AC voltage generator to simuate 50 Hz noise.
-> * In transient and AC conditions with resistance of the digital potentiometer varying from 1 kΩ to 40 kΩ (step of 1 kΩ) to see the influence of this component on ccircuit response.
+> * In transient and AC conditions with resistance of the digital potentiometer varying from 1 kΩ to 15 kΩ (step of 1 kΩ) to see the influence of this component on ccircuit response.
 <div align="center"> 
-<img src="Illustrations/transient_sim.png" width="900" />
+<img src="Illustrations/transient_sim_nominal.png" width="900" />
 
-**Transient simulation with R2 varying between 1 kΩ to 40 kΩ**
+**Transient simulation with R2 varying between 1 kΩ to 15 kΩ**
  
-<img src="Illustrations/transient_sim_with_noise.png" width="900" />
+<img src="Illustrations/transient_sim_noise.png" width="900" />
 
-   **Transient simulation with with R2 varying between 1 kΩ to 40 kΩ and noise at 50 Hz (oscillations)**
+   **Transient simulation with with R2 varying between 1 kΩ to 15 kΩ and noise at 50 Hz (oscillations)**
    <div align="left">   
+
+> The digital potentiometer has a strong influence on electrical circuit. The gain is modified, but not into a linear way with potentiometer variation. The more the resistance is high, the less is the gain, and the worse is the output signal (see [Limits](#8-limits) section)
+      
+      
 The folder 
    [Electrical simulations on LT-Spice](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Electrical%20simulations%20on%20LT-Spice) 
    contains the LT-Spice files used into different simulations. 
@@ -227,3 +232,11 @@ The six sensors were tested under compressive and tensile deflection on cylindri
 # 7. Datasheet
 Datesheet is providing the main characteristics and technical specifications of the strain sensor. It is in the folder [Datasheet](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Datasheet)
    of the repository. 
+
+# 8. Limits
+   Is important to notice the limits of the sensor and the innacuracy of the test measures. Here are main points to be studied or solved:
+   * The digital potentiometer MCP41050 is perfectly adapted to the graphite sensor. It would be better to have a sensor with a resistance variation between 10 Ω to 15 Ω, as the MCP41010 from *Microchip* for example.
+   * The mapping from 8 bits to 10 bits in arduino code may lead to a resolution loss, so we lose in quality for the signal. 
+   * We need a switch button to interrupt in case of problems
+   * Regarding test bed, we are never sure of the amount of deposited graphite and it is not uniform. Also, the graphite quantity variation is not linear with pencils changing. Finally, paper is damaged after several compression/tension, so the measures are never similar
+   
