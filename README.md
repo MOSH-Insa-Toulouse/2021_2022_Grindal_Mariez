@@ -91,7 +91,7 @@ The final electrical circuit chosen is the following:
 <img src="Illustrations/transient_sim_with_noise.png" width="900" />
 
 The folder 
-   [Electrical simulations on LT-Spice]https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Electrical%20simulations%20on%20LT-Spice 
+   [Electrical simulations on LT-Spice](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Electrical%20simulations%20on%20LT-Spice) 
    contains the LT-Spice files used into different simulations. 
 
 # 3. PCB conception on _KiCad_
@@ -123,8 +123,7 @@ Circuit conception was made on *KiCad*.
 
 > A 3D visualisation is possible and allowed us to well arrange components placement without spatial conflict. 
 
-All *KiCad* files are in the folder
-   [Projet2022_grindal_mariez_pcb](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Projet2022_grindal_mariez_pcb)
+All *KiCad* files are in the folder [Projet2022_grindal_mariez_pcb](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Projet2022_grindal_mariez_pcb)
    section.
 
 ### PCB printing processes
@@ -175,8 +174,7 @@ In this case, the mode of pins on the board are initialized with pinMode(), and 
 >   * The OLEDstartup() function is simply the startup screen sequence, lasting around two seconds.
 >   * The last functions doEncoderA() and doEncoderB() is attached to interrupts on both pins for the rotary encoder and includes debouncing, ensuring a rapid and accurate response to manual rotation of the encoder. The variable maxRot ensures a circular list regardless of scrolling through the menu or manually adjusting the gain.
 
-Arduino code is available in the 
-   [Arduino code](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Arduino%20code)
+Arduino code is available in the [Arduino code](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Arduino%20code)
    section.
   
 # 5. APK application
@@ -189,6 +187,8 @@ Main features:
 <p align="center"> 
 <img src="Illustrations/application_interface.jpg" width="300" />
 
+The application folders .apk and .api are  available in the [Application](https://github.com/MOSH-Insa-Toulouse/2021_2022_Grindal_Mariez/tree/main/Application)
+   folder.
  
 # 6. Test bed
 The six sensors were tested under compressive and tensile deflection on cylindrical objects with a constant diameter. The test bed consisted of seven cylindral objects with each a diameter ranging from 7 cm to 1,15 cm. The contact surface was covered in paper to minimize interactions between the object and the graphite layer on the sensor under compressive deflection.
